@@ -1,0 +1,32 @@
+.list {
+  list-style: none;
+  padding-left: 22px;
+  margin: 25px 0;
+  line-height: 1.7;
+
+  li {
+    position: relative;
+    color: $color-darkgray;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 30px;
+    
+    &::before {
+      content: "";
+      height: 5px;
+      width: 5px;
+      background: $color-white;
+      display: block;
+      position: absolute;
+      top: 11px;
+      left: -20px;
+      border-radius: 50%;
+    }
+  }
+}
+
+@include desktop {
+  .list {
+    margin: 36px 0;
+  }
+}

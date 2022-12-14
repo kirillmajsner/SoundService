@@ -1,0 +1,56 @@
+.schema-box {
+  background: $color-darkgray;
+  padding: 50px 0 30px;
+
+  .schemas {
+    .schema {
+      margin-bottom: 30px;
+
+      .shema-image {
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+
+      .title {
+        margin-bottom: 15px;
+      }
+
+      .description {
+        padding-right: 8%;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .schema-box {
+    padding: 450px 0 70px;
+    margin-top: -486px;
+    background: url("../images/vinil.png") 95% 100% no-repeat, $color-darkgray;
+    box-shadow: inset 0px -20px 150px 20px #3C4147;
+
+    .schemas {
+      .schema {
+        margin-bottom: 54px;
+
+        .shema-image {
+          margin-bottom: 5px;
+        }
+
+        .description {
+          font-size: 15px;
+        }
+      }
+
+      .row {
+        :not(:last-child) {
+          .schema {
+            .title {
+              background: url("../images/dots.svg") center right no-repeat;
+            }
+          }
+        }
+      }
+    }
+  }
+}

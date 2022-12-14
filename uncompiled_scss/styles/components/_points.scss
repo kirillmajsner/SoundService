@@ -1,0 +1,39 @@
+.points {
+  padding-top: 5px;
+  padding-bottom: 25px;
+  background: $points-background;
+
+  .point {
+    margin-bottom: 35px;
+    
+    .img {
+      margin-bottom: 5px;
+    }
+
+    .title {
+      line-height: 1.5;
+      padding-right: 15%;
+      margin-bottom: 9px;
+    }
+  }
+}
+
+@include desktop {
+  .points {
+    padding: 467px 0 66px;
+    margin-top: -468px;
+    margin-bottom: 83px;
+
+    .point {
+      padding-right: 20%;
+
+      .img {
+        margin-bottom: 11px;
+      }
+
+      .title {
+        margin-bottom: 14px;
+      }
+    }
+  }
+}

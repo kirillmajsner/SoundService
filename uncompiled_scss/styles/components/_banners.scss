@@ -1,0 +1,137 @@
+.banner-box {
+  position: relative;
+  z-index: 2;
+  
+  &.special {
+    margin-bottom: -100px;
+
+    .banner-body {
+      background: url("../images/banner-bg.jpg") left center no-repeat;
+      background-size: cover;
+      background-repeat: no-repeat;
+      text-align: center;
+
+      padding: 60px 25px;
+      box-shadow: 0 37px 82px $color-yellow;
+      margin-bottom: 154px;
+
+      .middle-title {
+        line-height: 1.18;
+        margin-bottom: 20px;
+      }
+
+      .description {
+        padding: 0 20px;
+      }
+
+      .button {
+        padding: 15px 20px 12px;
+        width: 100%;
+      }
+    }
+  }
+
+  &.gift {
+    margin-bottom: -100px;
+
+    .banner-body {
+      .body {
+        background: url("../images/gift.svg") -44px 38px no-repeat, url("../images/gift-bg.jpg") left center no-repeat;
+        background-size: 169px, cover;
+        background-repeat: no-repeat;
+        padding: 121px 25px 5px;
+      }
+
+      .button {
+        letter-spacing: 2px;
+      }
+
+      box-shadow: 0 40px 71px $color-yellow;
+      margin-bottom: 154px;
+    }
+  }
+}
+
+@include tablet {
+  .banner-box {
+    &.gift {
+      position: relative;
+      z-index: 1;
+
+
+      .banner-body {
+        .body {
+          padding-right: 20%;
+          background: url("../images/gift.svg") -44px 38px no-repeat, url("../images/gift-bg.jpg") left center no-repeat;
+          background-size: 169px, cover;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .banner-box {
+    &.special {
+      margin-top: 50px;
+
+      .banner-body {
+        background: url("../images/banner-bg.jpg") center no-repeat;
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+
+        padding: 100px;
+        margin-bottom: 242px;
+
+        .middle-title {
+          width: 90%;
+          margin: auto;
+          margin-bottom: 20px;
+        }
+
+        .description {
+          width: 68%;
+          margin: auto;
+          margin-bottom: 30px;
+        }
+
+        .button {
+          width: 304px;
+          letter-spacing: 2px;
+        }
+      }
+    }
+
+    &.gift {
+      margin-top: 99px;
+      margin-bottom: -100px;
+  
+      .banner-body {
+        .body {
+          background: url("../images/gift.svg") 14px 59px no-repeat, url("../images/gift-bg.jpg") left center no-repeat;
+          background-size: 169px, cover;
+          background-repeat: no-repeat;
+
+          padding-right: 50%;
+          padding-left: 150px;
+          padding-top: 88px;
+        }
+
+        .middle-title {
+          margin-bottom: 35px;
+        }
+
+        .description {
+          margin-bottom: 35px;
+        }
+  
+        .button {
+        }
+  
+        margin-bottom: 154px;
+      }
+    }
+  }
+}

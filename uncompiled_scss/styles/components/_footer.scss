@@ -1,0 +1,171 @@
+.footer {
+  background: $color-darkgray;
+  padding-top: 37px;
+  margin-top: 75px;
+
+  .info-block {
+    .logo {
+      margin-bottom: 12px;
+    }
+  }
+
+  .menu-block {
+    padding-bottom: 15px;
+
+    .caption {
+      margin-top: 0;
+      margin-bottom: 7px;
+    }
+  }
+
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 3px 0;
+
+    .menu-item {
+      flex-basis: 50%;
+      margin: 14px 0;
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #43494f;
+    padding: 35px 0 20px;
+
+    .link {
+      margin-bottom: 29px;
+    }
+
+    .section {
+      margin-bottom: 45px;
+
+      .caption {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      &:last-child {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .download-app-link {
+    display: none;
+  }
+}
+
+@include tablet {
+  .footer {
+    .footer-bottom {
+      .sections {
+        display: flex;
+        justify-content: space-between;
+
+        .section {
+          margin-bottom: 0;
+
+          .link {
+            &::before {
+              margin-right: 5px;
+            }
+          }
+
+          &:first-child {
+            order: 1;
+
+            > * {
+              margin-left: 10px;
+            }
+          }
+
+          &:last-child {
+            order: 0;
+
+            > * {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .footer {
+    margin-top: 32px;
+    padding-top: 100px;
+
+    .info-block {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      align-items: flex-start;
+      
+      .download-app-link {
+        margin-top: auto;
+        display: flex;
+      }
+    }
+
+    .menu-block {
+      .caption {
+        margin-bottom: 18px;
+      }
+
+      .menu {
+        padding: 0;
+        margin: 3px 0;
+
+        .menu-item {
+          margin: 14px 0 20px;
+        }
+      }
+    }
+
+    .footer-bottom {
+      margin-top: 42px;
+      padding-bottom: 15px;
+
+      .sections {
+        display: flex;
+        justify-content: space-between;
+
+        .section {
+          display: flex;
+
+          .link {
+            &::before {
+              margin-right: 5px;
+            }
+          }
+
+          &:first-child {
+            > *:not(:first-child) {
+              margin-left: 60px;
+            }
+          }
+
+          &:last-child {
+            > *:not(:last-child) {
+              margin-right: 60px;
+            }
+          }
+        }
+      }
+    }
+
+    .link,
+    a.caption {
+      transition: 200ms ease;
+    
+      &:hover {
+        color: $color-yellow;
+      }
+    }
+  }
+}

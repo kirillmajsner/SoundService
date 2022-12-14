@@ -1,0 +1,28 @@
+$font_regular: '../fonts/muller-regular';
+$font_bold: '../fonts/muller-bold';
+
+// Muller Regular muller-regular
+@font-face {
+  font-family: 'Muller';
+  src: url($font_regular + '.eot'); /* IE9 Compat Modes */
+  src: url($font_regular + '.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url($font_regular + '.woff2') format('woff2'), /* Super Modern Browsers */
+       url($font_regular + '.woff') format('woff'), /* Pretty Modern Browsers */
+       url($font_regular + '.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url($font_regular + '.svg#svgFontName') format('svg'),  /* Legacy iOS */
+       url($font_regular + '.otf') format('openType');
+  font-weight: normal;
+}
+
+// Muller Bold muller-bold
+@font-face {
+  font-family: 'Muller';
+  src: url($font_bold + '.eot'); /* IE9 Compat Modes */
+  src: url($font_bold + '.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url($font_bold + '.woff2') format('woff2'), /* Super Modern Browsers */
+       url($font_bold + '.woff') format('woff'), /* Pretty Modern Browsers */
+       url($font_bold + '.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url($font_bold + '.svg#svgFontName') format('svg'),  /* Legacy iOS */
+       url($font_bold + '.otf') format('openType');
+  font-weight: bold;
+}

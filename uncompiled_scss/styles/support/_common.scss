@@ -1,0 +1,308 @@
+.img-block {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
+.big-title {
+  color: $color-dirty-white;
+  font-size: 30px;
+  line-height: 1.2;
+
+  margin-top: 0;
+  margin-bottom: 18px;
+
+  &.dark {
+    color: $color-darkgray;
+  }
+}
+
+.description {
+  color: $color-dirty-white;
+  font-size: 15px;
+  line-height: 1.7;
+
+  opacity: 0.8;
+
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  &.dark {
+    color: $color-lightgray;
+    opacity: 1;
+  }
+
+  &.gray {
+    color: $color-gray;
+    opacity: 1;
+  }
+
+  &.white {
+    color: $color-white;
+    opacity: 1;
+  }
+
+  &.darkgray {
+    color: $color-darkgray;
+  }
+}
+
+.button {
+  font-size: 12px;
+  color: $color-dark-blue;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+
+  padding: 41px 63px;
+  text-decoration: none;
+  font-weight: bold;
+
+  border: none;
+
+  &.white {
+    background: $color-white;
+  }
+
+  &.yellow {
+    background: $color-yellow;
+  }
+
+  &.wide {
+    width: 100%;
+  }
+
+  &.link {
+    border-radius: 23px;
+    padding: 15px 32px 12px;
+  }
+
+  &.market-place {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    min-width: 159px;
+    border-radius: 25px;
+    padding: 13px 25px 12px;
+
+    text-transform: capitalize;
+    font-size: 15px;
+    background: $market-buttons;
+
+    margin-bottom: 20px;
+
+    .market-logo {
+      margin-right: 16px;
+
+      width: 24px;
+      height: 25px;
+      display: inline-block;
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      &.playstore {
+        background-image: url("../images/play-market.png");
+      }
+
+      &.appstore {
+        background-image: url("../images/app-store.png");
+      }
+
+      &.windows {
+        background-image: url("../images/windows-store.png");
+      }
+    }
+
+    .place-name {
+      display: block;
+      padding-top: 3px;
+      letter-spacing: 0.2px;
+    }
+  }
+}
+
+.title {
+  font-size: 20px;
+  color: $color-white;
+  font-weight: bold;
+  margin-top: 0;
+  line-height: 1.3;
+
+  &.dark {
+    color: $color-darkgray;
+  }
+}
+
+.middle-title {
+  font-size: 30px;
+  color: $color-white;
+  font-weight: bold;
+  margin-top: 0;
+  line-height: 1.3;
+
+  &.dark {
+    color: $color-darkgray;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+}
+
+.number {
+  color: $color-gray;
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  font-size: 15px;
+  background: $color-dark-yellow;
+  border: none;
+  color: $color-white;
+
+  padding: 35px 30px 34px;
+
+  &::placeholder {
+    color: $color-white;
+  }
+}
+
+.link {
+  font-size: 13px;
+  font-weight: bold;
+  color: $color-white;
+  text-decoration: none;
+  display: flex;
+  line-height: 1.7;
+
+  &.with::before {
+    content: "";
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 18px;
+    flex-shrink: 0;
+  }
+
+  &.phone::before {
+    background-image: url("../images/phone.svg");
+  }
+
+  &.email::before {
+    background-image: url("../images/mail.svg");
+  }
+}
+
+.caption {
+  font-size: 13px;
+  font-weight: normal;
+  color: $color-lightgray;
+  line-height: 2;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.download-app-link {
+  display: flex;
+  background: #545b63;
+  padding: 15px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-size: 12px;
+  width: fit-content;
+  align-items: center;
+  min-width: 245px;
+
+  .group {
+    display: flex;
+    flex-direction: column;
+    color: $color-white;
+    margin-left: 10px;
+    margin-top: 5px;
+
+    .title {
+      text-transform: uppercase;
+      font-size: 12px;
+      display: block;
+      letter-spacing: 1.7px;
+    }
+
+    .platforms {
+      display: block;
+      opacity: 0.5;
+      font-weight: bold;
+    }
+  }
+}
+
+@include tablet {
+  .caption,
+  .link {
+    font-size: 11px;
+  }
+}
+
+@include desktop {
+  .download-app-link {
+    transition: 200ms ease;
+    
+    &:hover {
+      background: $color-yellow;
+    }
+  }
+  .caption,
+  .link {
+    font-size: 15px;
+  }
+
+  .big-title {
+    font-size: 60px;
+    line-height: 1.2;
+  }
+
+  .description {
+    font-size: 18px;
+    line-height: 1.7;
+
+    opacity: 0.8;
+  }
+
+  .middle-title {
+    font-size: 40px;
+
+    &.dark {
+      font-size: 30px;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+  }
+
+  .button {
+    transition: 200ms ease;
+
+    padding: 52px 25px 50px;
+
+    &:hover {
+      background: $color-darkgray;
+      color: $color-white;
+    }
+  }
+
+  .input {
+    font-size: 15px;
+    background: $color-dark-yellow;
+    border: none;
+    color: $color-white;
+
+    padding: 43px 25px 42px;
+
+    &::placeholder {
+      color: $color-white;
+    }
+  }
+}

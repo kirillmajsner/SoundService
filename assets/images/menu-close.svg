@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Exit</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Музыка-Меню" transform="translate(-151.000000, -34.000000)" fill="#3C4147" fill-rule="nonzero">
+            <g id="Exit" transform="translate(160.000000, 43.000000) rotate(-315.000000) translate(-160.000000, -43.000000) translate(149.000000, 32.000000)">
+                <path d="M10,10 L10,0.142135624 L12,0.142135624 L12,10 L21.8578644,10 L21.8578644,12 L12,12 L12,21.8578644 L10,21.8578644 L10,12 L0.142135624,12 L0.142135624,10 L10,10 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

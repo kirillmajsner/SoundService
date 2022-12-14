@@ -1,0 +1,66 @@
+.certificates {
+  padding-top: 60px;
+
+  .block-header {
+    margin-bottom: 28px;
+  }
+
+  .certificate {
+    margin-bottom: 23px;
+
+    .img {
+      display: block;
+      height: 325px;
+      transition: 500ms ease;
+
+      width: calc(100% + 50px);
+      object-position: -50px -23px;
+      object-fit: cover;
+    }
+  }
+}
+
+@include tablet {
+  .certificates {
+    padding-top: 60px;
+  
+    .block-header.group {
+      margin-bottom: 28px;
+      padding-right: 0;
+    }
+  
+    .certificate {
+      margin-bottom: 23px;
+  
+      .img {
+        display: block;
+        height: 325px;
+        transition: 500ms ease;
+  
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .certificates {
+    padding-top: 60px;
+  
+    .block-header.group {
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+  
+    .certificate {
+      margin-bottom: 23px;
+  
+      .img {
+        display: block;
+        height: auto;
+        transition: 500ms ease;
+      }
+    }
+  }
+}

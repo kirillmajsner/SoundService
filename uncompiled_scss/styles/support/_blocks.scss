@@ -1,0 +1,77 @@
+.block-box {
+  overflow-x: hidden;
+
+  .block-header {
+    background: url("../images/rounds-bg.svg") 2px 9px no-repeat;
+    background-size: 25px;
+    padding-top: 35px;
+    margin-bottom: 11px;
+
+    &.group {
+      .block-title {
+      }
+
+      .block-description {
+      }
+    }
+  }
+}
+
+@include tablet {
+  .block-box {
+    .block-header {
+      background: url("../images/rounds-bg.svg") 0px 10px no-repeat;
+      background-size: 32px;
+      padding-top: 55px;
+      margin-bottom: 90px;
+
+      .block-title {
+        padding-right: 25%;
+      }
+
+      .block-description {
+        padding-top: 16px;
+      }
+
+      &.group {
+        padding-right: 20%;
+        
+        .block-title {
+        }
+
+        .block-description {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .block-box {
+    .block-header {
+      .block-title {
+      }
+
+      .block-description {
+        padding-left: 18%;
+      }
+
+      &.group {
+        margin-bottom: 0px;
+        
+        .block-title {
+        }
+
+        .block-description {
+        }
+      }
+    }
+
+    &.low {
+      .block-header {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

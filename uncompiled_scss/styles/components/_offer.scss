@@ -1,0 +1,65 @@
+.offer-box {
+  margin-bottom: 40px;
+
+  .offer-image {
+    .img {
+      display: block;
+      width: 100%;
+      height: auto;
+
+      transform: scale(1.2);
+    }
+  }
+
+  .offer-body {
+    background: url("../images/rounds-bg.svg") 2px 30px no-repeat;
+    background-size: 25px;
+    padding-top: 58px;
+  }
+
+  .buttons {
+  }
+}
+
+@include desktop {
+  .offer-box {
+    margin-top: 40px;
+    margin-bottom: 120px;
+    
+    .offer-image {
+      .img {
+        transform: scale(1.25);
+        position: relative;
+        left: -8%;
+      }
+    }
+
+    .offer-body {
+      background: url("../images/rounds-bg.svg") 0px 31px no-repeat;
+      background-size: 32px;
+      padding-top: 73px;
+      padding-right: 14%;
+
+      .middle-title {
+        width: 75%;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      margin-top: 50px;
+      flex-wrap: wrap;
+
+      .button {
+        margin-right: 20px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        flex-basis: 159px;
+
+        .market-logo {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.team {
+  margin-top: 55px;
+  margin-bottom: 40px;
+
+  .team-member {
+    margin-top: 12px;
+    margin-bottom: 20px;
+
+    .title {
+      margin-bottom: 4px;
+    }
+
+    .img {
+      margin-bottom: 12px;
+
+      width: 100%;
+      height: auto;
+      display: inline-block;
+    }
+  }
+}
+
+@include desktop {
+  .team {
+    margin-top: 55px;
+    margin-bottom: 80px;
+
+    .block-header {
+      margin-top: 28px;
+
+      .big-title {
+        margin-bottom: 24px;
+      }
+    }
+
+    .team-member {
+      margin-top: 12px;
+      margin-bottom: 20px;
+
+      .title {
+        margin-bottom: 4px;
+      }
+
+      .img {
+        margin-bottom: 12px;
+
+        width: 100%;
+        height: auto;
+        display: inline-block;
+      }
+    }
+  }
+}

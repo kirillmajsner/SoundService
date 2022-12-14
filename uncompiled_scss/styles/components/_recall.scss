@@ -1,0 +1,49 @@
+.recall-box {
+  background: $color-yellow;
+
+  padding: 60px 0;
+  margin-bottom: 55px;
+
+  .recall-head {
+    margin-bottom: 40px;
+
+    .middle-title {
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+  }
+
+  .recall-form {
+    .input {
+      margin-bottom: 1px;
+    }
+
+    .button {
+      letter-spacing: 1.7px;
+    }
+  }
+}
+
+@include tablet {
+  .recall-box {
+    padding: 100px 0 0;
+    margin-bottom: 90px;
+
+    .recall-head {
+      text-align: center;
+      margin-bottom: 69px;
+    }
+
+    .recall-form {
+      .input {
+        text-align: center;
+        padding: 53px 25px 52px;
+        margin-bottom: 0;
+      }
+
+      .button {
+        padding: 52px 25px 50px;
+      }
+    }
+  }
+}

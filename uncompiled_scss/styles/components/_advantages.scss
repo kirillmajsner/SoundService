@@ -1,0 +1,36 @@
+.advantages {
+  margin-bottom: 20px;
+
+  .advantage {
+    padding: 10px 5px 0;
+
+    .img {
+      margin-bottom: 8px;
+    }
+
+    .title {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@include desktop {
+  .advantages {
+    margin-bottom: 60px;
+
+    .advantage {
+      margin-top: 10px;
+
+      .description {
+        font-size: 15px;
+      }
+    }
+
+    > :nth-child(2),
+    > :nth-child(3) {
+      .advantage {
+        margin-top: 45px;
+      }
+    }
+  }
+}

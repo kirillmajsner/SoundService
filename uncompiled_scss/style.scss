@@ -1,0 +1,45 @@
+@import "grid/main";
+@import "slick/main";
+
+@import "styles/support/normalize";
+@import "styles/support/variables";
+@import "styles/support/fonts";
+@import "styles/support/mixins";
+@import "styles/support/grid";
+@import "styles/support/common";
+@import "styles/support/blocks";
+@import "styles/support/list";
+
+@import "styles/components/header";
+@import "styles/components/footer";
+@import "styles/components/slider";
+@import "styles/components/carts";
+@import "styles/components/schema";
+@import "styles/components/recall";
+@import "styles/components/playlist";
+@import "styles/components/banners";
+@import "styles/components/advantages";
+@import "styles/components/offer";
+@import "styles/components/points";
+@import "styles/components/team";
+@import "styles/components/bid";
+@import "styles/components/partners";
+@import "styles/components/certificates";
+
+body {
+  font-family: "Muller", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+@include tablet {
+  body {
+    font-size: 16px;
+  }
+}
+
+@include desktop {
+  body {
+    font-size: 18px;
+  }
+}

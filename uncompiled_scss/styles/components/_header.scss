@@ -1,0 +1,335 @@
+.header {
+  position: absolute;
+  top: 0;
+  z-index: 20;
+  right: 0;
+  left: 0;
+  letter-spacing: 1.7px;
+  line-height: normal;
+
+  .header-body-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 0;
+
+    .logo-place {
+      width: 105px;
+    }
+
+    .navigation {
+      position: absolute;
+      top: -1000px;
+      left: 0;
+      right: 0;
+
+      opacity: 0;
+      z-index: -1;
+      transition: 300ms ease-out;
+
+      text-align: center;
+
+      .menu,
+      .dropdown-menu {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        margin-bottom: 45px;
+
+        text-align: center;
+
+        .menu-item,
+        .dropdown-item {
+          text-align: center;
+          margin-bottom: 18px;
+          position: relative;
+
+          .menu-link,
+          .dropdown-link {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $color-darkgray;
+            font-size: 12px;
+            display: inline-block;
+            padding: 10px 0;
+            font-weight: bold;
+          }
+
+          &.dropdown {
+            .menu-link::after {
+              content: "";
+              position: absolute;
+              transition: 500ms;
+              display: inline-block;
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-width: 5px 3px 0 3px;
+              border-color: $color-darkgray transparent transparent transparent;
+              top: 12px;
+              margin-left: 5px;
+            }
+          }
+
+          &.active {
+            &.dropdown {
+              .menu-link::after {
+                transform: rotate(56deg);
+                bottom: 14px;
+              }
+            }
+
+            .dropdown-menu {
+              background: #ffcf60;
+              display: flex;
+              flex-wrap: wrap;
+              flex-flow: column;
+              position: relative;
+              top: 0;
+            }
+          }
+        }
+
+        .close {
+          width: 20px;
+          margin-bottom: 13px;
+        }
+      }
+
+      .menu-item {
+        overflow: hidden;
+
+        .dropdown-menu {
+          position: absolute;
+          transition: 400ms linear;
+          left: 0;
+          right: 0;
+          margin-bottom: 0;
+          margin-top: 10px;
+          padding-top: 10px;
+
+          .dropdown-item {
+            flex-basis: 50%;
+          }
+        }
+      }
+    }
+
+    .login-button-place {
+      .button.login {
+        display: none;
+      }
+    }
+
+    .menu-toggle {
+      width: 51px;
+    }
+  }
+
+  .logo-place,
+  .menu-toggle {
+    transition: 200ms linear;
+  }
+
+  .login {
+    color: #ffcf60;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    display: inline-block;
+    border: 2px solid #ffcf60;
+    padding: 15px 46px;
+    border-radius: 50px;
+    text-align: center;
+  }
+
+  &.opened {
+    position: absolute;
+    background: $color-white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    .navigation {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      
+      overflow-y: scroll;
+      opacity: 1;
+      z-index: 1;
+      padding: 33px 0;
+      background: $color-white;
+    }
+
+    .logo-place,
+    .menu-toggle {
+      opacity: 0;
+    }
+  }
+}
+
+@include tablet {
+  .header {
+    letter-spacing: 0.1px;
+  }
+}
+
+@include desktop {
+  .header {
+    letter-spacing: 0.1px;
+
+    .header-body-box {
+      padding: 40px 0;
+
+      .menu-toggle {
+        display: none;
+      }
+
+      .navigation {
+        position: relative;
+        display: flex;
+        opacity: 1;
+        z-index: 1;
+        top: 0;
+
+        .menu {
+          display: flex;
+
+          padding: 0;
+          margin: 0;
+          align-items: center;
+
+          .menu-item {
+            margin-bottom: 0;
+
+            .menu-link {
+              transition: 0.5s;
+              color: $color-white;
+              padding: 18px 0;
+              font-weight: bold;
+              margin-right: 15px;
+              margin-left: 15px;
+              cursor: pointer;
+              position: relative;
+
+              &:hover {
+                color: $color-yellow;
+              }
+            }
+
+            &.active {
+              .menu-link {
+                color: $color-yellow;
+              }
+            }
+
+            &.active,
+            &:hover {
+              &.dropdown {
+                overflow: visible;
+
+                .dropdown-menu {
+                  opacity: 1;
+                }
+
+                .menu-link::after {
+                  border-color: $color-yellow transparent transparent transparent;
+                  transform: rotate(56deg);
+                }
+              }
+            }
+
+            &.dropdown {
+              .menu-link::after {
+                border-color: $color-white transparent transparent transparent;
+                bottom: 15px;
+                top: 21px;
+                right: -10px;
+              }
+            }
+
+            .toggler {
+              display: none;
+            }
+
+            &.dropdown {
+              .dropdown-menu {
+                opacity: 0;
+                position: absolute;
+                background: $color-white;
+                color: $color-darkgray;
+                top: 38px;
+                left: -15px;
+                width: 500px;
+                flex-wrap: wrap;
+                display: flex;
+                flex-direction: row;
+                padding: 30px 35px 20px;
+
+                .dropdown-item {
+                  text-align: left;
+
+                  .dropdown-link {
+                    transition: 0.25s;
+
+                    border-bottom: 2px solid transparent;
+
+                    &:hover {
+                      border-bottom: 2px solid $color-yellow;
+                    }
+                  }
+                }
+
+                &:before {
+                  position: absolute;
+                  top: -8px;
+                  left: 40px;
+                  content: "";
+                  display: inline-block;
+                  width: 0;
+                  height: 0;
+                  border-style: solid;
+                  border-width: 12px 0 0 12px;
+                  border-color: transparent transparent transparent $color-white;
+                  opacity: 0;
+                }
+              }
+
+              &.active,
+              &:hover {
+                .dropdown-menu:before {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+
+        .button.login {
+          display: none;
+        }
+      }
+
+      .login-button-place {
+        .button.login {
+          display: inline-block;
+        }
+      }
+    }
+
+    .login {
+      transition: 0.5s;
+      &:hover {
+        background: #ffcf60;
+        color: #333;
+      }
+    }
+  }
+}
